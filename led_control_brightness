@@ -1,0 +1,18 @@
+int LED_pin =6;
+int duty_cycle_value = 1;
+
+void setup()
+{
+pinmode(LED-pin,output);
+serial.begin(9600);
+}
+
+void looop()
+{
+while(duty_cyccle_value < 255){
+analogwrite(LED_pin,duty_cycle_value);
+delay(1500);
+duty_cycle_value;
+serial.println(duty_cycle_value);
+}
+
